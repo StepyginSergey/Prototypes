@@ -44,11 +44,20 @@ public class ConvertHTMLSpecial {
 
         String s1 = "\t";
 
-        if(sb.indexOf(s1) >= 0){
-            sb.replace(0, sb.length(),s1);
+        int i = sb.indexOf(s1);
+        while ( i >= 0){
+
+            sb.replace(i, i+s1.length(), s1);
+
+            if(sb.indexOf(s1) > 0){
+                i = sb.indexOf(s1);
+            }else {
+                i = -1;
+            }
+            System.out.println(sb);
         }
 
-        System.out.println(sb.toString());
+        System.out.println(sb);
 
     }
 
