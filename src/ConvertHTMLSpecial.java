@@ -2,8 +2,7 @@ public class ConvertHTMLSpecial {
 
 //https://www.degraeve.com/reference/specialcharacters.php
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("\"\n" +
+        String sb = "\"\n" +
                 "<objects_request>\n" +
                 "\t<object_type>vpts_connection_type</object_type>\n" +
                 "\t<properties count=\"2\">\n" +
@@ -32,7 +31,7 @@ public class ConvertHTMLSpecial {
                 "\t<order count=\"1\">\n" +
                 "\t\t<property direction=\"asc\">name</property>\n" +
                 "\t</order>\n" +
-                "</objects_request>\"");
+                "</objects_request>\"";
 
 
 
@@ -40,14 +39,14 @@ public class ConvertHTMLSpecial {
     }
 
 
-    private static void convert(StringBuilder sb){
+    private static void convert(String sb){
 
         String s1 = "\t";
 
         int i = sb.indexOf(s1);
         while ( i >= 0){
 
-            sb.replace(i, i+s1.length(), s1);
+            //sb.replace(i, i+s1.length(), s1);
 
             if(sb.indexOf(s1) > 0){
                 i = sb.indexOf(s1);
