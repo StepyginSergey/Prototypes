@@ -1,6 +1,6 @@
 public class Matcher {
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         String s1 = "AA-(RU)";
         String s2 = "AA-(RU)";
 
@@ -14,10 +14,10 @@ public class Matcher {
     }
 
 
-
-    private static String clearRatingValue(String rating_value) {
-        rating_value = rating_value.replace("А", "A").replace("В", "B").replace("С", "C");
-        return rating_value;
+    private static String clearRatingValue(final String rating_value) {
+        String rv = rating_value.replace("А", "A").replace("В", "B")
+                .replace("С", "C");
+        return rv;
     }
 
 }
